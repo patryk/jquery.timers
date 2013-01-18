@@ -90,7 +90,7 @@ jQuery.extend({
 			handler.timerID = fn.timerID;
 
 			if (!timers[label][fn.timerID])
-				timers[label][fn.timerID] = window.setInterval(handler,interval);
+				timers[label][fn.timerID] = setInterval(handler,interval);
 
             element.data(this.dataKey, timers);
 
@@ -107,12 +107,12 @@ jQuery.extend({
 				} else if ( timers[label] ) {
 					if ( fn ) {
 						if ( fn.timerID ) {
-							window.clearInterval(timers[label][fn.timerID]);
+							clearInterval(timers[label][fn.timerID]);
 							delete timers[label][fn.timerID];
 						}
 					} else {
 						for ( var fn in timers[label] ) {
-							window.clearInterval(timers[label][fn]);
+							clearInterval(timers[label][fn]);
 							delete timers[label][fn];
 						}
 					}
