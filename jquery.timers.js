@@ -109,12 +109,12 @@ jQuery.extend({
 						if ( fn.timerID ) {
 							clearInterval(timers[label][fn.timerID]);
 							delete timers[label][fn.timerID];
-						}
+						};
 					} else {
 						for ( var fn in timers[label] ) {
 							clearInterval(timers[label][fn]);
 							delete timers[label][fn];
-						}
+						};
 					}
 
 					for ( ret in timers[label] ) break;
