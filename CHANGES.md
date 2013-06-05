@@ -1,4 +1,5 @@
 Version 1.2.1
+-------------
 05.06.2013 by Andrey Hihlovskiy (akhikhl)
 
 Put plugin into document-ready call to improve integration with multiple jQuery 
